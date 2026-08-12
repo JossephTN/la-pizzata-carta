@@ -149,7 +149,7 @@ body {
   letter-spacing: 0.02em;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   align-items: center;
   margin: 6px 0 18px;
 }
@@ -157,15 +157,24 @@ body {
   color: var(--text);
   text-decoration: none;
   display: inline-flex;
-  align-items: center;
+  align-items: baseline;
   gap: 8px;
 }
+.contact a:hover, .contact a:focus-visible { color: var(--accent); }
 .contact a::before {
   content: "";
   width: 6px; height: 6px;
   border-radius: 50%;
   background: var(--accent);
   flex: none;
+  align-self: center;
+}
+.contact-label {
+  font-weight: 400;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
 }
 .tagline {
   font-style: italic;
@@ -415,8 +424,8 @@ a:focus-visible, .catnav a:focus-visible {
   <h1>Menú</h1>
   <div class="ornament"><span class="diamond"></span></div>
   <div class="contact">
-    <a href="https://instagram.com/lapizzata_calama">@Lapizzata_calama</a>
-    <a href="https://wa.me/56987854460">+56 9 8785 4460</a>
+    <a href="https://instagram.com/lapizzata_calama" target="_blank" rel="noopener"><span class="contact-label">Instagram</span>&nbsp;@Lapizzata_calama</a>
+    <a href="https://wa.me/56987854460" target="_blank" rel="noopener"><span class="contact-label">WhatsApp</span>&nbsp;+56 9 8785 4460</a>
     <span>Av. Granaderos #1696</span>
   </div>
   <div class="ornament"><span class="diamond"></span></div>
