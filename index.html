@@ -242,8 +242,26 @@ section { scroll-margin-top: 56px; padding-top: 34px; }
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 18px;
+  border-radius: 18px 18px 0 0;
   box-shadow: var(--shadow);
+}
+.promo-caption {
+  background: var(--bg-card);
+  border-radius: 0 0 16px 16px;
+  padding: 14px 18px;
+  margin-top: -6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  box-shadow: var(--shadow);
+}
+.promo-caption-main { min-width: 0; flex: 1; }
+.promo-nota {
+  margin: 0;
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 0.92rem;
 }
 
 .dish-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
@@ -446,9 +464,18 @@ a:focus-visible, .catnav a:focus-visible {
 
   <section id="promos">
     <div class="section-head"><span class="section-tab">Promos</span></div>
-    <p class="section-sub">Ofertas por tiempo limitado — exclusivas para retiro o consumo en el local, no aplican a delivery.</p>
+    <p class="section-sub">Ofertas por tiempo limitado.</p>
     <ul class="promo-list">
-      <li class="promo-card"><img src="promos/pizza-patria.jpg" alt="Pizza Patria — Individual $10.400 / Familiar $21.900 — disponible solo por septiembre, con pebre casero de regalo" loading="lazy"></li>
+      <li class="promo-card">
+  <img src="promos/pizza-patria.jpg" alt="Pizza Patria — ganadora de la comunidad, con pebre casero de regalo" loading="lazy">
+  <div class="promo-caption">
+    <div class="promo-caption-main">
+      <h3 class="dish-name">Pizza Patria</h3>
+      <p class="promo-nota">Disponible en local y delivery · Solo por septiembre</p>
+    </div>
+    <div class="dish-price"><span class="pill pill--sm">IND. $10.400</span><span class="pill pill--sm">FAM. $21.900</span></div>
+  </div>
+</li>
     </ul>
   </section>
 
