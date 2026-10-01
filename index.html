@@ -334,6 +334,16 @@ section { scroll-margin-top: 56px; padding-top: 34px; }
   text-align: center;
   font-size: 1.15rem;
 }
+.base-nota {
+  text-align: center;
+  margin: -8px 0 10px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: .8rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--accent, #D98255);
+}
 .base-row {
   display: flex;
   justify-content: space-between;
@@ -451,33 +461,19 @@ a:focus-visible, .catnav a:focus-visible {
 </div>
 
 <nav class="catnav" aria-label="Categorías del menú">
-  <a href="#promos">Promos</a>
+  
   <a href="#pizzas">Pizzas</a>
   <a href="#arma">Arma tu pizza</a>
   <a href="#burgers">Smash Burgers</a>
   <a href="#picar">Para picar</a>
-  <a href="#onces">Onces</a>
+  <a href="#onces">Desayunos y onces</a>
+  <a href="#bolleria">Bollería</a>
   <a href="#bebidas">Bebestibles</a>
 </nav>
 
 <div class="wrap">
 
-  <section id="promos">
-    <div class="section-head"><span class="section-tab">Promos</span></div>
-    <p class="section-sub">Ofertas por tiempo limitado.</p>
-    <ul class="promo-list">
-      <li class="promo-card">
-  <img src="promos/pizza-patria.jpg" alt="Pizza Patria — ganadora de la comunidad, con pebre casero de regalo" loading="lazy">
-  <div class="promo-caption">
-    <div class="promo-caption-main">
-      <h3 class="dish-name">Pizza Patria</h3>
-      <p class="promo-nota">Disponible en local y delivery · Solo por septiembre</p>
-    </div>
-    <div class="dish-price"><span class="pill pill--sm">IND. $10.400</span><span class="pill pill--sm">FAM. $21.900</span></div>
-  </div>
-</li>
-    </ul>
-  </section>
+  
 
   <section id="pizzas">
     <div class="section-head"><span class="section-tab">Pizzas</span></div>
@@ -531,6 +527,17 @@ a:focus-visible, .catnav a:focus-visible {
   <div class="dish-main">
     <h3 class="dish-name">MIX CARNES</h3>
     <p class="dish-desc">Salsa de tomate, queso mozzarella, carne, pollo, tocino, champiñón, orégano.</p>
+  </div>
+  <div class="dish-price">
+    <span class="pill pill--sm">FAM. $ 21.900</span>
+    <span class="pill pill--sm">MED. $ 17.900</span>
+    <span class="pill pill--sm">IND. $ 10.400</span>
+  </div>
+</li>
+<li class="dish-card">
+  <div class="dish-main">
+    <h3 class="dish-name">BARBECUE</h3>
+    <p class="dish-desc">Salsa barbecue, queso mozzarella, pollo, tocino.</p>
   </div>
   <div class="dish-price">
     <span class="pill pill--sm">FAM. $ 21.900</span>
@@ -595,17 +602,6 @@ a:focus-visible, .catnav a:focus-visible {
 </li>
 <li class="dish-card">
   <div class="dish-main">
-    <h3 class="dish-name">ESPAÑOLA</h3>
-    <p class="dish-desc">Salsa de tomate, queso mozzarella, chorizo, jamón, pimentón, tomate, orégano.</p>
-  </div>
-  <div class="dish-price">
-    <span class="pill pill--sm">FAM. $ 19.900</span>
-    <span class="pill pill--sm">MED. $ 16.900</span>
-    <span class="pill pill--sm">IND. $ 9.400</span>
-  </div>
-</li>
-<li class="dish-card">
-  <div class="dish-main">
     <h3 class="dish-name">BAMBINO</h3>
     <p class="dish-desc">Salsa de tomate, queso mozzarella, jamón, vienesa, orégano.</p>
   </div>
@@ -644,9 +640,10 @@ a:focus-visible, .catnav a:focus-visible {
     <div class="section-head"><span class="section-tab">Arma tu pizza</span></div>
     <div class="base-card">
       <h3>Masa base (salsa de tomate y queso)</h3>
-      <div class="base-row"><span>Individual</span><span class="pill">$ 4.500</span></div>
-      <div class="base-row"><span>Mediana</span><span class="pill">$ 9.000</span></div>
-      <div class="base-row"><span>Familiar</span><span class="pill">$ 10.500</span></div>
+      <p class="base-nota">(mínimo 2 ingredientes)</p>
+      <div class="base-row"><span>Individual</span><span class="pill">$ 6.500</span></div>
+      <div class="base-row"><span>Mediana</span><span class="pill">$ 11.500</span></div>
+      <div class="base-row"><span>Familiar</span><span class="pill">$ 14.500</span></div>
     </div>
     <p class="toppings-label">AGREGA LOS INGREDIENTES QUE QUIERAS</p>
     <div class="topping-legend"><span>IND.</span><span>MED.</span><span>FAM.</span></div>
@@ -786,16 +783,6 @@ a:focus-visible, .catnav a:focus-visible {
 </li>
 <li class="dish-card dish-card--oliva">
   <div class="dish-main">
-    <h3 class="dish-name">BURGER ITALIANA</h3>
-    <p class="dish-desc">Blend 125gr, tomate, palta, con una porción de papas fritas.</p>
-  </div>
-  <div class="dish-price">
-    <span class="pill pill--sm">DOBLE $ 13.200</span>
-    <span class="pill pill--sm">SIMPLE $ 8.900</span>
-  </div>
-</li>
-<li class="dish-card dish-card--oliva">
-  <div class="dish-main">
     <h3 class="dish-name">BACON PRATO</h3>
     <p class="dish-desc">Blend 125gr, queso cheddar americano, mermelada de tocino, trozos de apio, salsa stacker, con una porción de papas fritas.</p>
   </div>
@@ -872,7 +859,7 @@ a:focus-visible, .catnav a:focus-visible {
   </section>
 
   <section id="onces" class="section--oliva">
-    <div class="section-head"><span class="section-tab">Onces</span></div>
+    <div class="section-head"><span class="section-tab">Desayunos y onces</span></div>
     <ul class="dish-list">
       <li class="dish-card dish-card--oliva dish-card--flat">
   <div class="dish-main">
@@ -883,17 +870,35 @@ a:focus-visible, .catnav a:focus-visible {
 </li>
 <li class="dish-card dish-card--oliva dish-card--flat">
   <div class="dish-main">
-    <h3 class="dish-name">2 MEDIALUNAS SOLAS</h3>
-    
+    <h3 class="dish-name">PAILA DE 3 HUEVOS</h3>
+    <p class="dish-desc">+ tostadas.</p>
   </div>
-  <div class="dish-price"><span class="pill">$ 2.900</span></div>
+  <div class="dish-price"><span class="pill">$ 3.900</span></div>
 </li>
 <li class="dish-card dish-card--oliva dish-card--flat">
   <div class="dish-main">
-    <h3 class="dish-name">2 MEDIALUNAS</h3>
-    <p class="dish-desc">+ té de hoja o café pequeño.</p>
+    <h3 class="dish-name">CAFÉ DE MÁQUINA</h3>
+    <p class="dish-desc">+ rollo de canela.</p>
   </div>
   <div class="dish-price"><span class="pill">$ 4.900</span></div>
+</li>
+    </ul>
+  </section>
+
+  <section id="bolleria">
+    <div class="section-head"><span class="section-tab">Bollería</span></div>
+    <ul class="drink-list">
+      <li class="drink-row">
+  <span class="drink-name">Rollo de canela</span>
+  <span class="pill pill--sm">$ 2.200</span>
+</li>
+<li class="drink-row">
+  <span class="drink-name">Dona rellena</span>
+  <span class="pill pill--sm">$ 1.900</span>
+</li>
+<li class="drink-row">
+  <span class="drink-name">Dona glaseada</span>
+  <span class="pill pill--sm">$ 1.600</span>
 </li>
     </ul>
   </section>
@@ -907,7 +912,7 @@ a:focus-visible, .catnav a:focus-visible {
 </li>
 <li class="drink-row">
   <span class="drink-name">Agua 500cc</span>
-  <span class="pill pill--sm">$ 1.990</span>
+  <span class="pill pill--sm">$ 1.700</span>
 </li>
 <li class="drink-row">
   <span class="drink-name">Jugo natural</span>
@@ -920,6 +925,10 @@ a:focus-visible, .catnav a:focus-visible {
 <li class="drink-row">
   <span class="drink-name">Monster</span>
   <span class="pill pill--sm">$ 2.500</span>
+</li>
+<li class="drink-row">
+  <span class="drink-name">Score</span>
+  <span class="pill pill--sm">$ 1.900</span>
 </li>
     </ul>
     <p class="drinks-subhead">Bebidas calientes</p>
